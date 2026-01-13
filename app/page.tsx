@@ -26,7 +26,7 @@ export default function HomePage() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-background to-muted">
-        <div className="container mx-auto px-4 py-24 md:py-32">
+        <div className="container mx-auto px-4 py-16 md:py-20">
           <div ref={heroRef} className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
@@ -72,7 +72,7 @@ export default function HomePage() {
       </section>
 
       {/* Scrolling Stats Marquee */}
-      <section className="py-8 bg-primary overflow-hidden">
+      <section className="py-12 bg-primary overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           <div className="flex items-center gap-16 px-8">
             <div className="flex items-center gap-3">
@@ -156,7 +156,7 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-16 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-8" ref={featuresRef}>
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
@@ -195,7 +195,7 @@ export default function HomePage() {
                 <div>
                   <h3 className="text-lg font-bold mb-1">Flexibel plannen</h3>
                   <p className="text-sm text-muted-foreground">
-                    Ook 's avonds en in het weekend
+                    Ook &apos;s avonds en in het weekend
                   </p>
                 </div>
               </div>
@@ -296,7 +296,7 @@ export default function HomePage() {
       </section>
 
       {/* Hoe werkt het */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
@@ -328,15 +328,16 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          </div>
         </div>
       </section>
 
       {/* Schakel vs Automaat */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Schakel of Automaat?</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Beide opties hebben hun voordelen. Kies wat bij jou past.
             </p>
           </div>
@@ -453,7 +454,7 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-secondary" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center text-white">

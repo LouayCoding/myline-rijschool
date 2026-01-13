@@ -131,10 +131,8 @@ export default function OverOnsPage() {
                 <Shield className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="font-bold mb-2">Moderne Lesauto's</h3>
-                <p className="text-sm text-muted-foreground">
-                  Goed onderhouden met nieuwste veiligheidsvoorzieningen
-                </p>
+                <h3 className="font-bold mb-2">Moderne Lesauto&apos;s</h3>
+                <p className="text-sm text-muted-foreground">Veilige en comfortabele auto&apos;s met dubbele bediening</p>
               </div>
             </div>
           </div>

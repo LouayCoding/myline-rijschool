@@ -25,7 +25,8 @@ export default function PrijzenPage() {
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-background to-muted">
         <div className="container mx-auto px-4">
           <div ref={headerRef} className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Prijzen & Pakketten</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Prijzen &amp; Pakketten</h1>
+            <p className="text-sm text-muted-foreground">Ideaal voor beginners die stap voor stap willen leren rijden</p>
             <p className="text-xl text-muted-foreground">
               Transparante prijzen zonder verborgen kosten
             </p>
@@ -123,7 +124,7 @@ export default function PrijzenPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">✓</span>
-                  <span>Moderne en goed onderhouden lesauto's</span>
+                  <span>Moderne en goed onderhouden lesauto&apos;s</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">✓</span>
@@ -139,7 +140,7 @@ export default function PrijzenPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">✓</span>
-                  <span>Flexibele lestijden, ook 's avonds en weekend</span>
+                  <span>Flexibele lestijden, ook &apos;s avonds en weekend</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">✓</span>

@@ -19,7 +19,7 @@ export default function ContactPage() {
           <div ref={headerRef} className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Neem contact op</h1>
             <p className="text-xl text-muted-foreground">
-              Heb je vragen of wil je direct starten? We staan voor je klaar!
+              Heb je vragen? We&apos;re hier om je te helpen!
             </p>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mt-4">
-                * Rijlessen ook 's avonds en in het weekend mogelijk
+                * Rijlessen ook &apos;s avonds en in het weekend mogelijk
               </p>
             </CardContent>
           </Card>
