@@ -6,11 +6,21 @@ import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -20,15 +30,26 @@ export function Header() {
     { href: "/contact", label: "Contact" },
   ];
 
+  const isHomePage = pathname === "/";
+  const isTransparent = isHomePage && !scrolled;
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur-md">
+    <header className={cn(
+      "sticky top-0 z-50 w-full transition-all duration-300",
+      isTransparent 
+        ? "bg-transparent" 
+        : "bg-white shadow-sm"
+    )}>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-md bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
             <span className="text-white font-bold text-sm">ML</span>
           </div>
-          <span className="font-bold text-xl text-foreground">
+          <span className={cn(
+            "font-bold text-xl transition-colors",
+            isTransparent ? "text-white" : "text-foreground"
+          )}>
             {siteConfig.name}
           </span>
           </Link>
@@ -41,8 +62,12 @@ export function Header() {
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-md transition-all",
                 pathname === item.href
-                  ? "bg-primary/10 text-primary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  ? isTransparent
+                    ? "bg-white/20 text-white"
+                    : "bg-primary/10 text-primary"
+                  : isTransparent
+                    ? "text-white/80 hover:text-white hover:bg-white/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
               )}
             >
               {item.label}
@@ -51,16 +76,29 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-          <a href={`tel:${siteConfig.phone}`} className="hidden lg:flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted">
+          <a href={`tel:${siteConfig.phone}`} className={cn(
+            "hidden lg:flex items-center gap-2 px-3 py-2 text-sm transition-colors rounded-md",
+            isTransparent
+              ? "text-white/80 hover:text-white hover:bg-white/10"
+              : "text-muted-foreground hover:text-foreground hover:bg-muted"
+          )}>
             <Phone className="h-4 w-4" />
             <span className="font-medium">{siteConfig.phone}</span>
           </a>
-          <Button asChild className="hidden sm:flex">
-            <Link href="/proefles">Proefles Boeken</Link>
+          <Button asChild className={cn(
+            "hidden sm:flex",
+            isTransparent && "bg-white text-foreground hover:bg-white/90"
+          )}>
+            <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Proefles Boeken</a>
           </Button>
 
             <button
-            className="md:hidden p-2 hover:bg-muted rounded-md transition-colors"
+            className={cn(
+              "md:hidden p-2 rounded-md transition-colors",
+              isTransparent
+                ? "text-white hover:bg-white/10"
+                : "text-foreground hover:bg-muted"
+            )}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -95,7 +133,7 @@ export function Header() {
               ))}
               <div className="pt-2 mt-2 border-t border-border/40">
                 <Button asChild className="w-full">
-                  <Link href="/proefles">Proefles Boeken</Link>
+                  <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Proefles Boeken</a>
                 </Button>
               </div>
             </nav>

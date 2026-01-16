@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { Lexend } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { MobileBottomBar } from "@/components/layout/mobile-bottom-bar";
 import { siteConfig } from "@/content/site";
+
+const lexend = Lexend({ 
+  subsets: ["latin"],
+  variable: "--font-lexend",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -43,11 +48,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl">
-      <body className="min-h-screen flex flex-col">
+      <body className={`${lexend.variable} min-h-screen flex flex-col font-sans`}>
         <Header />
-        <main className="flex-1 pb-20 md:pb-0">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
-        <MobileBottomBar />
       </body>
     </html>
   );

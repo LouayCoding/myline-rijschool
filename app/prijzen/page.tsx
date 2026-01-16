@@ -98,7 +98,7 @@ export default function PrijzenPage() {
                   </div>
                   <div className="mt-6">
                     <Button className="w-full" asChild>
-                      <Link href="/proefles">Neem contact op</Link>
+                      <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Neem contact op</a>
                     </Button>
                   </div>
                 </CardContent>
@@ -183,7 +183,7 @@ export default function PrijzenPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="/proefles">Gratis Proefles Boeken</Link>
+                <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Proefles Boeken</a>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link href="/contact">Neem Contact Op</Link>

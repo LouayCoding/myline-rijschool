@@ -34,7 +34,7 @@ export default function ContactPage() {
             <p className="text-muted-foreground">We reageren snel op al je vragen</p>
           </div>
           
-          <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div ref={cardsRef} className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <Card>
             <CardHeader>
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -98,31 +98,14 @@ export default function ContactPage() {
             </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader>
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <MapPin className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle>Adres</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                {siteConfig.address}
-              </p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Op afspraak
-              </p>
-            </CardContent>
-          </Card>
           </div>
         </div>
       </section>
 
-      {/* Opening Hours & Map */}
+      {/* Opening Hours */}
       <section className="py-16 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div>
+          <div className="max-w-2xl mx-auto">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -150,20 +133,6 @@ export default function ContactPage() {
               </p>
             </CardContent>
           </Card>
-            </div>
-            
-            <div ref={mapRef}>
-          <div className="relative aspect-video rounded-lg overflow-hidden bg-card">
-            {/* TODO: replace with actual Google Maps embed */}
-            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 mx-auto mb-4" />
-                <p className="text-sm">Google Maps locatie</p>
-                <p className="text-xs mt-2">{siteConfig.address}</p>
-              </div>
-            </div>
-          </div>
-            </div>
           </div>
         </div>
       </section>
@@ -174,10 +143,10 @@ export default function ContactPage() {
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Klaar om te starten?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Plan vandaag nog je gratis proefles en begin aan je rijbewijs
+              Plan vandaag nog je proefles en begin aan je rijbewijs
             </p>
             <Button size="lg" asChild>
-              <a href="/proefles">Gratis Proefles Boeken</a>
+              <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Proefles Boeken</a>
             </Button>
           </div>
         </div>

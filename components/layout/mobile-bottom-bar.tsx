@@ -17,7 +17,7 @@ export function MobileBottomBar() {
             </a>
           </Button>
           <Button className="flex-1" asChild>
-            <Link href="/proefles">Proefles</Link>
+            <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Proefles</a>
           </Button>
         </div>
       </div>

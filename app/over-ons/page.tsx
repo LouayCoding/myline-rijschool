@@ -107,9 +107,9 @@ export default function OverOnsPage() {
                 <Target className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="font-bold mb-2">Hoog Slagingspercentage</h3>
+                <h3 className="font-bold mb-2">Persoonlijke Begeleiding</h3>
                 <p className="text-sm text-muted-foreground">
-                  95% slagingspercentage - jouw succes is ons succes
+                  Individuele aandacht en een lesplan op maat - jouw succes is ons succes
                 </p>
               </div>
             </div>
@@ -149,7 +149,7 @@ export default function OverOnsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="/proefles">Gratis Proefles Boeken</Link>
+                <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Proefles Boeken</a>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link href="/reviews">Lees Reviews</Link>

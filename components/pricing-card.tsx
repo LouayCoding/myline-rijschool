@@ -42,7 +42,7 @@ export function PricingCard({ name, price, features, popular, badge }: PricingCa
       </CardContent>
       <CardFooter className="pt-6">
         <Button className="w-full" variant={popular ? "default" : "outline"} asChild>
-          <Link href="/proefles">{popular ? "Meest Gekozen" : "Selecteer"}</Link>
+          <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">{popular ? "Meest Gekozen" : "Selecteer"}</a>
         </Button>
       </CardFooter>
     </Card>

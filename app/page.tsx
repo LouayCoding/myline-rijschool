@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Star, Users, Award, CheckCircle2, Car, ArrowRight, Phone, MessageCircle, GraduationCap, Shield, TrendingUp } from "lucide-react";
+import { Star, Users, Award, CheckCircle2, Car, ArrowRight, Phone, MessageCircle, GraduationCap, Shield, TrendingUp, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { PricingCard } from "@/components/pricing-card";
@@ -18,136 +18,120 @@ export default function HomePage() {
   const pakketten1Ref = useGSAPStagger(0.15);
   const pakketten2Ref = useGSAPStagger(0.15);
   const stepsRef = useGSAPStagger(0.2);
-  const schakelRef = useGSAPStagger(0.15);
   const instructeursRef = useGSAPStagger(0.1);
   const faqRef = useGSAPReveal({});
 
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/10 via-background to-muted">
-        <div className="container mx-auto px-4 py-16 md:py-20">
-          <div ref={heroRef} className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                {siteConfig.hero.headline}
-              </h1>
-              
-              <p className="text-xl text-muted-foreground">
-                {siteConfig.hero.subline}
-              </p>
-              
-              <ul className="space-y-3">
-                {siteConfig.hero.trustBullets.map((bullet, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
-                    <span className="text-base">{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <Button size="lg" asChild>
-                  <Link href="/proefles">Proefles Boeken</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="/prijzen">Prijzen</Link>
-                </Button>
-              </div>
-            </div>
+      <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center justify-center -mt-16">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1691371107034-e28ee43a669e?q=80&w=1920&auto=format&fit=crop"
+            alt="Rijschool MY-Line"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/50 to-red-900/40"></div>
+        </div>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 pt-32 pb-20 md:pt-40 md:pb-32 relative z-10">
+          <div ref={heroRef} className="text-center max-w-4xl mx-auto">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
+              {siteConfig.hero.headline}
+            </h1>
             
-            <div className="relative">
-              <div className="relative aspect-[4/3] lg:aspect-square rounded-lg overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&h=900&fit=crop"
-                  alt="Gelukkige leerling met rijbewijs"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+            <p className="text-lg md:text-xl text-white/90 mb-10">
+              {siteConfig.hero.subline}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-base px-8 py-6 bg-primary hover:bg-primary/90 transition-all" asChild>
+                <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Aanmelden</a>
+              </Button>
+              <Button size="lg" variant="outline" className="text-base px-8 py-6 bg-transparent hover:bg-white/10 text-white border-2 border-white hover:border-white transition-all" asChild>
+                <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Scrolling Stats Marquee */}
-      <section className="py-12 bg-primary overflow-hidden">
-        <div className="flex animate-marquee whitespace-nowrap">
-          <div className="flex items-center gap-16 px-8">
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
-                <Award className="h-5 w-5 text-white" />
-              </div>
-              <div className="text-white">
-                <div className="text-2xl font-bold">2500+</div>
-                <div className="text-xs text-white/80">Geslaagde leerlingen</div>
-              </div>
+      {/* Stats Section */}
+      <section className="py-4 bg-primary">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="text-center text-white">
+              <div className="text-2xl font-bold">300+</div>
+              <div className="text-xs text-white/90">Geslaagde leerlingen</div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
-                <TrendingUp className="h-5 w-5 text-white" />
-              </div>
-              <div className="text-white">
-                <div className="text-2xl font-bold">95%</div>
-                <div className="text-xs text-white/80">Slagingspercentage</div>
-              </div>
+            <div className="text-center text-white">
+              <div className="text-2xl font-bold">4.9</div>
+              <div className="text-xs text-white/90">Gemiddelde beoordeling</div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
-                <Star className="h-5 w-5 text-white fill-white" />
-              </div>
-              <div className="text-white">
-                <div className="text-2xl font-bold">4.9</div>
-                <div className="text-xs text-white/80">Gemiddelde beoordeling</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
-                <Shield className="h-5 w-5 text-white" />
-              </div>
-              <div className="text-white">
-                <div className="text-2xl font-bold">15+</div>
-                <div className="text-xs text-white/80">Jaar ervaring</div>
-              </div>
+            <div className="text-center text-white">
+              <div className="text-2xl font-bold">8+</div>
+              <div className="text-xs text-white/90">Jaar ervaring</div>
             </div>
           </div>
-          <div className="flex items-center gap-16 px-8">
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
-                <Award className="h-5 w-5 text-white" />
+        </div>
+      </section>
+
+      {/* Over Ons Section */}
+      <section className="py-20 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-[1.2fr,1fr] gap-16 items-start max-w-6xl mx-auto">
+            <div>
+              {/* Eyebrow */}
+              <p className="text-sm font-medium text-primary mb-6 tracking-wide uppercase">Onze aanpak</p>
+              
+              {/* Statement Headline - Dominant */}
+              <h2 className="mb-6 leading-[1.1]">
+                <span className="block text-5xl md:text-6xl font-bold">Geen standaard rijschool</span>
+                <span className="block text-2xl md:text-3xl font-normal text-muted-foreground mt-2">— persoonlijke begeleiding</span>
+              </h2>
+              
+              {/* Supporting Copy */}
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">
+                Leren rijden vraagt vertrouwen. Daarom werken wij met vaste instructeurs en eerlijke begeleiding richting je examen.
+              </p>
+              
+              {/* CTA - Direct na intro */}
+              <div className="mb-16">
+                <Button size="lg" asChild>
+                  <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">
+                    Plan een proefles
+                  </a>
+                </Button>
               </div>
-              <div className="text-white">
-                <div className="text-2xl font-bold">2500+</div>
-                <div className="text-xs text-white/80">Geslaagde leerlingen</div>
+              
+              {/* Benefits - Secundair, rustiger */}
+              <div className="space-y-6 opacity-80">
+                <div>
+                  <h3 className="text-base font-semibold mb-1">Persoonlijke begeleiding</h3>
+                  <p className="text-sm text-muted-foreground">Elk lesplan afgestemd op jouw tempo en leerstijl.</p>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold mb-1">Eerlijk lesadvies</h3>
+                  <p className="text-sm text-muted-foreground">Doelgericht werken zonder onnodige lessen.</p>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold mb-1">Focus op zelfvertrouwen</h3>
+                  <p className="text-sm text-muted-foreground">Ontspannen leren in een veilige omgeving.</p>
+                </div>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
-                <TrendingUp className="h-5 w-5 text-white" />
-              </div>
-              <div className="text-white">
-                <div className="text-2xl font-bold">95%</div>
-                <div className="text-xs text-white/80">Slagingspercentage</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
-                <Star className="h-5 w-5 text-white fill-white" />
-              </div>
-              <div className="text-white">
-                <div className="text-2xl font-bold">4.9</div>
-                <div className="text-xs text-white/80">Gemiddelde beoordeling</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
-                <Shield className="h-5 w-5 text-white" />
-              </div>
-              <div className="text-white">
-                <div className="text-2xl font-bold">15+</div>
-                <div className="text-xs text-white/80">Jaar ervaring</div>
-              </div>
+            
+            <div className="relative aspect-[3/4] rounded-lg overflow-hidden lg:order-last order-first lg:sticky lg:top-24">
+              <Image
+                src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=1000&fit=crop"
+                alt="Rijschool MY-Line instructeur"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -295,8 +279,39 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Hoe werkt het */}
+      {/* Rijschool Features */}
       <section className="py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Waarom kiezen voor Rijschool MY-Line?</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Vriendelijkheid, kwaliteit, betrokkenheid en flexibiliteit
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {siteConfig.rijschoolFeatures.map((feature, index) => {
+              const icons = { Car, Calendar, Users, MapPin, Award };
+              const Icon = icons[feature.icon as keyof typeof icons];
+              return (
+                <Card key={index} className="text-center">
+                  <CardHeader>
+                    <div className="h-14 w-14 rounded-md bg-primary flex items-center justify-center mx-auto mb-4">
+                      <Icon className="h-7 w-7 text-white" />
+                    </div>
+                    <CardTitle className="text-lg">{feature.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Hoe werkt het */}
+      <section className="py-16 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
@@ -332,100 +347,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Schakel vs Automaat */}
-      <section className="py-16 md:py-20 bg-background">
+      {/* Instructeur */}
+      <section className="py-16 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Schakel of Automaat?</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Beide opties hebben hun voordelen. Kies wat bij jou past.
-            </p>
-          </div>
-          <div ref={schakelRef} className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {siteConfig.schakelVsAutomaat.map((option, index) => (
-              <div key={option.type} className="group">
-                <div className="relative h-64 rounded-lg overflow-hidden mb-6">
-                  <Image
-                    src={`https://images.unsplash.com/photo-${index === 0 ? '1449965408869-eaa3f722e40d' : '1485463611174-f302f6a5c1c9'}?w=800&h=600&fit=crop`}
-                    alt={option.type}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="h-10 w-10 rounded-md bg-primary flex items-center justify-center">
-                        <Car className="h-6 w-6 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white">{option.type}</h3>
-                    </div>
-                    <p className="text-white/90 font-medium">{option.title}</p>
-                  </div>
-                </div>
-                <Card className="bg-card/50">
-                  <CardContent className="pt-6">
-                    <ul className="space-y-3">
-                      {option.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                            <CheckCircle2 className="h-4 w-4 text-primary" />
-                          </div>
-                          <span className="text-sm">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Instructeurs */}
-      <section className="relative py-16 md:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-background" />
-        <div className="absolute inset-0 opacity-5">
-          <Image
-            src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&h=1080&fit=crop"
-            alt="Background"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Onze instructeurs</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Jouw instructeur</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ervaren professionals die je helpen slagen
+              Professionele begeleiding voor auto en motor
             </p>
           </div>
-          <div ref={instructeursRef} className="grid md:grid-cols-3 gap-8">
-            {siteConfig.instructeurs.map((instructeur, index) => (
-              <div key={instructeur.name} className="group">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-6">
-                  <Image
-                    src={`https://images.unsplash.com/photo-${index === 0 ? '1507003211169-0a1dd7228f2d' : index === 1 ? '1500648767791-00a36c92f3b2' : '1519085360753-af0119f7b3cd'}?w=600&h=800&fit=crop&crop=faces`}
-                    alt={instructeur.name}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 right-4">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
-                      <span className="text-xs font-bold text-primary">{instructeur.experience}</span>
-                    </div>
+          <div ref={instructeursRef} className="max-w-2xl mx-auto">
+            {siteConfig.instructeurs.map((instructeur) => (
+              <div key={instructeur.name} className="bg-card rounded-lg overflow-hidden">
+                <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="relative aspect-[4/5] md:aspect-auto md:h-full">
+                    <Image
+                      src={instructeur.image}
+                      alt={`${instructeur.name} - Rijinstructeur Rijschool MY-Line`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority
+                    />
                   </div>
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold">{instructeur.name}</h3>
-                  <p className="text-muted-foreground">{instructeur.specialty}</p>
-                  <div className="flex items-center gap-2 pt-2">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-primary fill-primary" />
-                      ))}
+                  <div className="p-6 md:p-8 flex flex-col justify-center">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 w-fit">
+                      <Award className="h-4 w-4" />
+                      {instructeur.experience}
                     </div>
-                    <span className="text-sm text-muted-foreground">5.0 beoordeling</span>
+                    <h3 className="text-3xl md:text-4xl font-bold mb-3">{instructeur.name}</h3>
+                    <p className="text-xl text-muted-foreground mb-6">{instructeur.specialty}</p>
+                    <div className="flex items-center gap-2 mb-6">
+                      <div className="flex">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-5 w-5 text-primary fill-primary" />
+                        ))}
+                      </div>
+                      <span className="text-sm font-medium">5.0 beoordeling</span>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Met jarenlange ervaring in het lesgeven voor zowel auto als motor, help ik jou op een professionele en persoonlijke manier naar je rijbewijs.
+                    </p>
+                    <Button asChild>
+                      <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Proefles Boeken</a>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -460,7 +425,7 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto text-center text-white">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-primary/10">
               <Award className="h-4 w-4" />
-              <span className="text-sm font-medium">Gratis Proefles - Geen Verplichtingen</span>
+              <span className="text-sm font-medium">Proefles - Gratis bij pakketafname</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -468,12 +433,12 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl text-white/90 mb-10">
-              Boek een gratis proefles en begin met rijlessen
+              Boek een proefles en begin met rijlessen
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/proefles">Proefles Boeken</Link>
+                <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Proefles Boeken</a>
               </Button>
               <a href={`tel:${siteConfig.phone}`} className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-md font-medium text-white bg-white/10 hover:bg-white/20 transition-colors">
                 <Phone className="h-4 w-4" />

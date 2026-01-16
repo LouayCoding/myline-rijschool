@@ -127,7 +127,7 @@ export default function ProeflesPage() {
               </div>
               <h1 className="text-4xl font-bold mb-4">Aanmelding Ontvangen!</h1>
               <p className="text-xl text-muted-foreground mb-8">
-                We nemen binnen 24 uur contact met je op om je gratis proefles in te plannen.
+                We nemen binnen 24 uur contact met je op om je proefles in te plannen.
               </p>
               <div className="bg-card rounded-lg p-6 mb-8">
                 <h3 className="font-bold mb-4">Jouw gegevens:</h3>
@@ -166,7 +166,7 @@ export default function ProeflesPage() {
       <section className="py-16 md:py-20 bg-gradient-to-br from-primary/10 via-background to-muted">
         <div className="container mx-auto px-4">
           <div ref={headerRef} className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Plan je Gratis Proefles</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Plan je Proefles</h1>
             <p className="text-xl text-muted-foreground">
               Maak vrijblijvend kennis met onze instructeurs. Geen verplichtingen.
             </p>
@@ -289,8 +289,8 @@ export default function ProeflesPage() {
 
                     <div>
                       <label className="block text-sm font-medium mb-3">Auto of motor? *</label>
-                      <div className="grid grid-cols-3 gap-3">
-                        {['Schakelbak', 'Automaat', 'Motor'].map((type) => (
+                      <div className="grid grid-cols-2 gap-3">
+                        {['Auto', 'Motor'].map((type) => (
                           <button
                             key={type}
                             type="button"
