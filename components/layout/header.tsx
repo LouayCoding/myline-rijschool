@@ -39,7 +39,7 @@ export function Header() {
       "sticky top-0 z-50 w-full transition-all duration-300",
       isTransparent 
         ? "bg-transparent" 
-        : "bg-white shadow-sm"
+        : "bg-primary shadow-sm"
     )}>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
@@ -62,12 +62,8 @@ export function Header() {
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-md transition-all",
                 pathname === item.href
-                  ? isTransparent
-                    ? "bg-white/20 text-white"
-                    : "bg-primary/10 text-primary"
-                  : isTransparent
-                    ? "text-white/80 hover:text-white hover:bg-white/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  ? "bg-white/20 text-white"
+                  : "text-white/80 hover:text-white hover:bg-white/10"
               )}
             >
               {item.label}
@@ -78,9 +74,7 @@ export function Header() {
           <div className="flex items-center gap-3">
           <a href={`tel:${siteConfig.phone}`} className={cn(
             "hidden lg:flex items-center gap-2 px-3 py-2 text-sm transition-colors rounded-md",
-            isTransparent
-              ? "text-white/80 hover:text-white hover:bg-white/10"
-              : "text-muted-foreground hover:text-foreground hover:bg-muted"
+            "text-white/80 hover:text-white hover:bg-white/10"
           )}>
             <Phone className="h-4 w-4" />
             <span className="font-medium">{siteConfig.phone}</span>
@@ -95,9 +89,7 @@ export function Header() {
             <button
             className={cn(
               "md:hidden p-2 rounded-md transition-colors",
-              isTransparent
-                ? "text-white hover:bg-white/10"
-                : "text-foreground hover:bg-muted"
+              "text-white hover:bg-white/10"
             )}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
