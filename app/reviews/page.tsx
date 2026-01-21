@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -50,26 +49,16 @@ export default function ReviewsPage() {
             {siteConfig.reviews.map((review, index) => (
               <Card key={index}>
                 <CardHeader>
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="relative h-12 w-12 rounded-full overflow-hidden shrink-0">
-                      <Image
-                        src={`https://images.unsplash.com/photo-${index % 3 === 0 ? '1507003211169-0a1dd7228f2d' : index % 3 === 1 ? '1500648767791-00a36c92f3b2' : '1519085360753-af0119f7b3cd'}?w=100&h=100&fit=crop&crop=faces`}
-                        alt={review.name}
-                        fill
-                        className="object-cover"
-                      />
+                  <div className="mb-4">
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="font-bold">{review.name}</h3>
+                      <Badge className="bg-primary text-white text-xs">{review.package}</Badge>
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between mb-1">
-                        <h3 className="font-bold">{review.name}</h3>
-                        <Badge className="bg-primary text-white text-xs">{review.package}</Badge>
-                      </div>
-                      <p className="text-xs text-muted-foreground mb-2">{review.date}</p>
-                      <div className="flex gap-1">
-                        {[...Array(review.rating)].map((_, i) => (
-                          <Star key={i} className="h-3.5 w-3.5 text-primary fill-primary" />
-                        ))}
-                      </div>
+                    <p className="text-xs text-muted-foreground mb-2">{review.date}</p>
+                    <div className="flex gap-1">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star key={i} className="h-3.5 w-3.5 text-primary fill-primary" />
+                      ))}
                     </div>
                   </div>
                 </CardHeader>
