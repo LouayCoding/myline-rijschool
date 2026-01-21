@@ -2,26 +2,16 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Phone, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/utils";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 export function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -31,16 +21,8 @@ export function Header() {
     { href: "/contact", label: "Contact" },
   ];
 
-  const isHomePage = pathname === "/";
-  const isTransparent = isHomePage && !scrolled;
-
   return (
-    <header className={cn(
-      "sticky top-0 z-50 w-full transition-all duration-300",
-      isTransparent 
-        ? "bg-transparent" 
-        : "bg-primary shadow-sm"
-    )}>
+    <header className="sticky top-0 z-50 w-full bg-primary shadow-sm transition-all duration-300">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center">
@@ -54,7 +36,7 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -62,7 +44,7 @@ export function Header() {
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-md transition-all",
                 pathname === item.href
-                  ? "bg-white/20 text-white"
+                  ? "text-white"
                   : "text-white/80 hover:text-white hover:bg-white/10"
               )}
             >
@@ -72,25 +54,12 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-          <a href={`tel:${siteConfig.phone}`} className={cn(
-            "hidden lg:flex items-center gap-2 px-3 py-2 text-sm transition-colors rounded-md",
-            "text-white/80 hover:text-white hover:bg-white/10"
-          )}>
-            <Phone className="h-4 w-4" />
-            <span className="font-medium">{siteConfig.phone}</span>
-          </a>
-          <Button asChild className={cn(
-            "hidden sm:flex",
-            isTransparent && "bg-white text-foreground hover:bg-white/90"
-          )}>
+          <Button asChild className="hidden sm:flex bg-black text-white hover:bg-black/80">
             <a href="https://www.startmetjerijbewijs.nl/rijschool-my-line/inschrijven" target="_blank" rel="noopener noreferrer">Proefles Boeken</a>
           </Button>
 
             <button
-            className={cn(
-              "md:hidden p-2 rounded-md transition-colors",
-              "text-white hover:bg-white/10"
-            )}
+            className="md:hidden p-2 rounded-md transition-colors text-white hover:bg-white/10"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
