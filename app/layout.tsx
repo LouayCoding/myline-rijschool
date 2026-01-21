@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
+import { Poppins, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { siteConfig } from "@/content/site";
 
-const lexend = Lexend({ 
+const poppins = Poppins({ 
   subsets: ["latin"],
-  variable: "--font-lexend",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
+});
+
+const montserrat = Montserrat({ 
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -62,7 +69,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl">
-      <body className={`${lexend.variable} min-h-screen flex flex-col font-sans`}>
+      <body className={`${poppins.variable} ${montserrat.variable} min-h-screen flex flex-col font-sans`}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
