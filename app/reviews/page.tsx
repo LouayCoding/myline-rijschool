@@ -62,7 +62,7 @@ export default function ReviewsPage() {
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-1">
                         <h3 className="font-bold">{review.name}</h3>
-                        <Badge className="bg-primary/10 text-primary text-xs">{review.package}</Badge>
+                        <Badge className="bg-primary text-white text-xs">{review.package}</Badge>
                       </div>
                       <p className="text-xs text-muted-foreground mb-2">{review.date}</p>
                       <div className="flex gap-1">
