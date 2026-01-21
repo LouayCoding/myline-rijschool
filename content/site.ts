@@ -234,46 +234,221 @@ export const siteConfig = {
 
   reviews: [
     {
-      name: "Emma van der Berg",
+      name: "Jamie-Elaine",
       rating: 5,
-      date: "December 2023",
-      text: "In één keer geslaagd dankzij de uitstekende begeleiding van Jan! Hij is geduldig, duidelijk en weet precies hoe hij je moet voorbereiden op het examen. Aanrader!",
-      package: "High Line"
+      date: "6 maanden geleden",
+      text: "Ik heb een hele fijne ervaring gehad met Mo. Hij legt alles haar fijn uit en weet goed te kunnen schakelen tussen plezier hebben tijdens het rijden en de focus te leggen op waar nodig is!",
+      package: "Auto"
     },
     {
-      name: "Thijs Vermeulen",
+      name: "Eva Weidum",
       rating: 5,
-      date: "November 2023",
-      text: "Super rijschool! Flexibele lestijden en een relaxte instructeur. Na 35 lessen geslaagd en het was elke les weer leuk.",
-      package: "Luxury Line"
+      date: "Een maand geleden",
+      text: "Hele fijne ervaring gehad. Naast de gezellige lessen was het ook heel leerzaam. Meer zelfvertrouwen op de snelweg gekregen na een paar goede peptalks. Dus als je op zoek bent naar een rijinstructeur met een goed plan, fijne en duidelijke uitleg zal ik hier zeker gaan lessen☺️",
+      package: "Auto"
     },
     {
-      name: "Lisa Hendriks",
+      name: "Netty Rojer Willems",
       rating: 5,
-      date: "Oktober 2023",
-      text: "Super rijschool! De instructeur heeft me enorm geholpen met geduld en duidelijke uitleg. Het High Line pakket was perfect voor mij. Geslaagd!",
-      package: "High Line"
+      date: "2 maanden geleden",
+      text: "Ik heb een hele fijne rijles periode gehad met mijn rij instructeur Mo. Hij is een hele rustig aardig en vriendelijke instructeur en help je op de weg naar je doel (rijbewijs behalen) hij neem tijd om je te leren kennen en help je op de weg.",
+      package: "Auto"
     },
     {
-      name: "Kevin de Jong",
+      name: "rrprv",
       rating: 5,
-      date: "September 2023",
-      text: "Motorlessen bij Mike waren top! Professioneel, veilig en veel geleerd. AVB en AVD beide in één keer gehaald.",
-      package: "Motorline 2"
+      date: "4 maanden geleden",
+      text: "Geslaagd bij rijschool MY-Line! Echt een super fijne rijschool, met de allerbeste rijinstructeur! Hij is erg duidelijk, heel geduldig en gezellig tijdens de lessen.",
+      package: "Auto"
     },
     {
-      name: "Sophie Bakker",
+      name: "Elif Nur",
       rating: 5,
-      date: "Augustus 2023",
-      text: "Fijne rijschool met moderne auto's. De online theoriecursus was super handig en de instructeur was altijd bereikbaar voor vragen.",
-      package: "Trend Line"
+      date: "4 maanden geleden",
+      text: "Ik ben heel blij dat ik voor deze rijschool heb gekozen. De instructeur is rustig, geduldig en geeft duidelijke uitleg. Hij ziet meteen waar je op moet letten en geeft praktische tips, waardoor je stap voor stap beter wordt.",
+      package: "Auto"
     },
     {
-      name: "Daan Visser",
+      name: "Dennis Annang",
       rating: 5,
-      date: "Juli 2023",
-      text: "Goede prijs-kwaliteit verhouding. Duidelijke uitleg en goede voorbereiding op het examen. Geslaagd na 32 lessen!",
-      package: "High Line"
+      date: "3 maanden geleden",
+      text: "I got my driving license thanks to Rijschool My-Line. Instructor was calm, clear, and incredibly supportive throughout the entire process. Highly recommended!",
+      package: "Auto"
+    },
+    {
+      name: "Blxckrich",
+      rating: 5,
+      date: "Een maand geleden",
+      text: "Een zeer professionele rijschool die je stapsgewijs helpt je rijbewijs te behalen. Ik ben zonder ervaring begonnen en heb alles in 1x gehaald.",
+      package: "Auto"
+    },
+    {
+      name: "A Harrasse",
+      rating: 5,
+      date: "6 maanden geleden",
+      text: "Ik heb mijn autorijbewijs in 1 keer behaald in 2022, en nu laatst weer terug geweest voor mijn motor. Weer in 1 keer behaald! Ik ga de pret van de lessen missen. Als jij opzoek bent naar een goede instructeur dan is dit de juiste rijschool.",
+      package: "Auto & Motor"
+    },
+    {
+      name: "Richayna Martha",
+      rating: 5,
+      date: "2 maanden geleden",
+      text: "Mo is heel geduldig en weet alles goed en duidelijk uit te leggen. Zeer tevreden en zeker een aanrader! Top rijschool.",
+      package: "Auto"
+    },
+    {
+      name: "Jane",
+      rating: 5,
+      date: "7 maanden geleden",
+      text: "Fijne rij instructeur is erg proactief en regelt snel een examen voor je ook als dat niet het geval is blijft hij het altijd in de gaten houden. Daarnaast is hij heel geduldig en neemt de tijd om alles goed uit te leggen. Ook als je er even doorheen zit weet hij je te motiveren en weer vertrouwen te geven.",
+      package: "Auto"
+    },
+    {
+      name: "JR_Nygelocean",
+      rating: 5,
+      date: "3 maanden geleden",
+      text: "Prima rijschool Mohammed is een duidelijke en rustige rij instructeur, en heb een zeer goeie ervaring gehad en tot slot hier mijn rijbewijs gehaald!!",
+      package: "Auto"
+    },
+    {
+      name: "Leandro JoAms",
+      rating: 5,
+      date: "3 maanden geleden",
+      text: "Beste rij instructeur. Super geduldig en motiverend, en hij maakte leren autorijden echt stressvrij.",
+      package: "Auto"
+    },
+    {
+      name: "Jabir 070",
+      rating: 5,
+      date: "7 maanden geleden",
+      text: "Beste rijschool! De instructeur legt alles rustig en duidelijk uit. Ik voelde me op mijn gemak en heb veel geleerd. In 1x geslaagd! Zeker een aanrader!",
+      package: "Auto"
+    },
+    {
+      name: "Mohamed Abdalla",
+      rating: 5,
+      date: "10 maanden geleden",
+      text: "Ik ben gisteren geslaagd en dat heb ik volledig te danken aan deze rijschool! Mijn instructeur was ontzettend goed: hij gaf duidelijke uitleg, bleef geduldig en zorgde ervoor dat ik me op mijn gemak voelde tijdens de lessen.",
+      package: "Auto"
+    },
+    {
+      name: "Pari Habib",
+      rating: 5,
+      date: "3 maanden geleden",
+      text: "Top rijinstructeur! Geeft je een goed welkoms gevoel en laat je je rijbewijs binnen 1X halen ☺️",
+      package: "Auto"
+    },
+    {
+      name: "Lina Ali",
+      rating: 5,
+      date: "9 maanden geleden",
+      text: "De beste, directe instructeur. Top lessen, altijd na de les een bespreking van hoe het gaat en zelfreflextie. De tijd met hem word goed benut en je krijgt ruimte om ook aan te geven wat je wil leren. Flexibel en snel geregel, zeker een aanrader!",
+      package: "Auto"
+    },
+    {
+      name: "Farina Camila",
+      rating: 5,
+      date: "7 maanden geleden",
+      text: "Top rijschool! Alles was altijd goed geregeld qua planning. Mijn rijinstructeur Mo was chill en heel geduldig. Hij nam de tijd om alles goed uit te leggen, ook de kleine dingetjes waar je op moet letten en na elke les even kort doornemen.",
+      package: "Auto"
+    },
+    {
+      name: "Chaima Rabhi",
+      rating: 5,
+      date: "11 maanden geleden",
+      text: "Ik heb mijn rijbewijs in één keer gehaald dankzij rijschool My Line! Rijschool heeft een geduldige rijinstructeur die duidelijke uitleg geeft en het geen probleem vindt om dingen te herhalen als je het niet begrijpt.",
+      package: "Auto"
+    },
+    {
+      name: "Alyssa xvd",
+      rating: 5,
+      date: "6 maanden geleden",
+      text: "Ik heb met ontzettend veel plezier les gehad. Er is geduld en er wordt duidelijk uitleg gegeven. Weet precies hoe je op je gemak wordt gesteld achter het stuur. Elke les voelde gestructureerd en leerzaam, maar ook gezellig. Dankzij de begeleiding ben ik geslaagd!",
+      package: "Auto"
+    },
+    {
+      name: "Press 11",
+      rating: 5,
+      date: "11 maanden geleden",
+      text: "Hele fijne rijervaring bij MYLine, betaalbare prijzen en een hele duidelijke maar toch wel gezellige instructeur die netjes alle afspraken na komt. Het fijnste vond ik de 2 uur lessen, naar mijn mening heb ik hier het meeste van geleerd. Bedankt voor de lessen en het helpen behalen van mijn rijbewijs!",
+      package: "Auto"
+    },
+    {
+      name: "Amiratu Nafsi",
+      rating: 5,
+      date: "Een jaar geleden",
+      text: "Eén van de beste rijscholen die er is! Ik ben ontzettend blij met mijn ervaring hier. Er is geen wachtrij, en mijn rijinstructeur is echt een hele lieve en gezellige persoon. Hij helpt je tot de finish!",
+      package: "Auto"
+    },
+    {
+      name: "Donovan Crawford",
+      rating: 5,
+      date: "7 maanden geleden",
+      text: "Zeer goeie rijschool. Voor auto en motor in 1x geslaagd!!! Zeker aan te raden voor de mensen die hun rijbewijs willen halen.",
+      package: "Auto & Motor"
+    },
+    {
+      name: "Vito Angelo Ferreira",
+      rating: 5,
+      date: "Een maand geleden",
+      text: "Hele fijne begeleiding van begin tot einde en altijd een hele leuke tijd gehad en met een glimlach achter het stuur gezeten🤙🏽",
+      package: "Auto"
+    },
+    {
+      name: "Yasmine Bensaber",
+      rating: 5,
+      date: "Een jaar geleden",
+      text: "Uitstekende rijschool! De instructeur is zeer professioneel en geduldig. Ik voelde me altijd op mijn gemak tijdens de lessen. Ik heb erg goede begeleiding gekregen waardoor ik in 1x ben geslaagd. Ik zou deze rijschool zeker aanbevelen aan iedereen die op zoek is naar kwalitatieve rijlessen.",
+      package: "Auto"
+    },
+    {
+      name: "Bach Pham",
+      rating: 5,
+      date: "Een jaar geleden",
+      text: "Onlangs heb ik met veel plezier mijn rijexamen in één keer afgerond bij Rijschool My Line, en ik moet zeggen dat het een uitstekende ervaring was van begin tot eind. Onder begeleiding van mijn instructeur - Mo, heb ik niet alleen de nodige vaardigheden geleerd.",
+      package: "Auto"
+    },
+    {
+      name: "Cagla Demir",
+      rating: 5,
+      date: "11 maanden geleden",
+      text: "Geslaagd voor mijn rijbewijs in 1x!! Dit had ik niet zonder jouw geduld, steun en vertrouwen gekund. Je hebt me altijd gemotiveerd, zelfs op moeilijke momenten. Bedankt voor de leerzame en fijne lessen! Top instructeur!🚗🤩",
+      package: "Auto"
+    },
+    {
+      name: "NorthGab",
+      rating: 5,
+      date: "Een jaar geleden",
+      text: "Echt een aanrader van een rijschool! Ik heb mijn motorrijbewijs gehaald binnen minder dan 3 maanden, ergens in november ben ik begonnen en begin februari had ik hem en allebei de examens binnen 1x gehaald, alles dankzij de goeie tips!",
+      package: "Motor"
+    },
+    {
+      name: "Shaqycia",
+      rating: 5,
+      date: "Een jaar geleden",
+      text: "Ik had een geweldige ervaring met Mohamed van rijschool MY-Line, een zelfstandige rijschool die ik ten zeerste kan aanbevelen! Vanaf het eerste contact was het duidelijk dat hij een persoonlijke benadering heeft. Mohamed is ontzettend professioneel!",
+      package: "Auto"
+    },
+    {
+      name: "Ramazan",
+      rating: 5,
+      date: "2 jaar geleden",
+      text: "In 1 keer geslaagd zonder fouten. Veel geleerd in korte tijd. Als je snel je Motor rijbewijs wilt halen moet je hier zijn.",
+      package: "Motor"
+    },
+    {
+      name: "Meryem N",
+      rating: 5,
+      date: "10 maanden geleden",
+      text: "Fijne rijlessen en vooral voldoende aandacht aan punten waarbij je zelf als student moeite mee hebt. Je wordt volledig voorbereidt dat je eigelijk alleen nog maar gezonde zenuwen hebt.",
+      package: "Auto"
+    },
+    {
+      name: "Kasper",
+      rating: 5,
+      date: "Een jaar geleden",
+      text: "Maandje geleden geslaagd en dit is 100% de beste rijlesinstructeur die er is. Je kan leuk grappen maken tijdens de lessen en toch een goede leer ervaring hebben. Binnen 1 keer geslaagd zonder moeite serieus echt een aanrader vriendelijke man die Mo.",
+      package: "Auto"
     }
   ],
 
