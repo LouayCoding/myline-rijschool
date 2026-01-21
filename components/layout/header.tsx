@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export function Header() {
   const pathname = usePathname();
@@ -42,16 +43,15 @@ export function Header() {
     )}>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-md bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
-            <span className="text-white font-bold text-sm">ML</span>
-          </div>
-          <span className={cn(
-            "font-bold text-xl transition-colors",
-            isTransparent ? "text-white" : "text-foreground"
-          )}>
-            {siteConfig.name}
-          </span>
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/images/myline-logo.png" 
+              alt={siteConfig.name}
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">

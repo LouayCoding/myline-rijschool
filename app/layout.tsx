@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     "CBR examen",
   ],
   authors: [{ name: siteConfig.name }],
+  icons: {
+    icon: "/images/myline-logo.png",
+    shortcut: "/images/myline-logo.png",
+    apple: "/images/myline-logo.png",
+  },
   openGraph: {
     type: "website",
     locale: "nl_NL",
@@ -33,11 +38,20 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/images/myline-logo.png",
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
+    images: ["/images/myline-logo.png"],
   },
 };
 
