@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, Facebook, Instagram } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { useEffect, useRef } from "react";
@@ -46,12 +47,15 @@ export function Footer() {
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="h-8 w-8 rounded-md bg-white flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">ML</span>
-              </div>
-              <span className="font-bold text-xl text-white">{siteConfig.name}</span>
-            </div>
+            <Link href="/" className="inline-block mb-4">
+              <Image 
+                src="/images/myline-logo.png" 
+                alt={siteConfig.name}
+                width={140}
+                height={45}
+                className="h-12 w-auto brightness-0 invert"
+              />
+            </Link>
             <p className="text-sm text-white/80 leading-relaxed mb-4">
               Professionele rijlessen voor auto en motor met hoge slagingspercentages.
             </p>
